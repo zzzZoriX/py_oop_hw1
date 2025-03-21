@@ -77,3 +77,27 @@ def auto_test():
     auto.need_service()
 
 # Телефон
+class Phone:
+    brand: str
+    model: str
+    year: int
+    battery_capacity: int
+    price: float
+    
+    def __init__(self, brand, model, year, battary, price):
+        self.battery_capacity = battary
+        self.model = model
+        self.brand = brand
+        self.price = price
+        self.year = year
+        
+    def info(self) -> None:
+        print(f"  {self.model}\n  {self.brand}\n  {self.year}\n  {self.battery_capacity}\n  {self.price}\n")
+        
+    def is_expensive(self) -> bool:
+        return self.price > 30000
+    
+def phone_test():
+    phone = Phone("Phonei", "nokia", 8841, -22, 232323.3)
+    phone.info()
+    phone.is_expensive()
