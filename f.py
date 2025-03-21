@@ -40,7 +40,7 @@ class Student:
         self.year_of_study = year_of_study
         
     def study_year(self) -> None:
-        print(f"{self.year_of_study}")
+        print(f"{self.year_of_study}\n")
         
     def is_excellent(self) -> bool:
         return self.gpa >= 4.5
@@ -51,5 +51,29 @@ def student_test() -> None:
     student.study_year()
 
 # Авто
+class Auto:
+    make: str
+    model: str
+    color: str
+    year: int
+    mileage: int
+    
+    def __init__(self, make, model, color, year, mieage):
+        self.make = make
+        self.model = model
+        self.color = color
+        self.year = year
+        self.mileage = mieage
+        
+    def info(self) -> None:
+        print(f"  {self.make}\n  {self.model}\n  {self.color}\n  {self.year}\n  {self.mileage}\n")
+        
+    def need_service(self) -> bool:
+        return self.mileage > 100000
+    
+def auto_test():
+    auto = Auto("make", "morgenshtern", "any", 123, 100001)
+    auto.info()
+    auto.need_service()
 
 # Телефон
